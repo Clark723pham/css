@@ -1,1 +1,13 @@
-
+{
+ "students": [
+ {
+ "name": "Clark Kent P. Pastillero","age": 20,"course": "Information Technology"
+ },
+ {
+ "name": "AJ Sarsonas","age": 22,"course": "Computer Science"
+ },
+ {
+ "name": "Jipre Baluyot","age": 19,"course": "Data Science"
+ }
+ ]
+}
