@@ -1,0 +1,60 @@
+{
+ "courses": [
+ {
+ "year_level": "1st",
+ "sem": "1st",
+ "code": "IT111",
+ "description": "Introduction to Computing",
+ "credit": "3.0"
+ },
+ {
+ "year_level": "1st",
+ "sem": "1st",
+ "code": "IT112",
+ "description": "Computer Programing 1",
+ "credit": "3.0"
+ },
+ {
+ "year_level": "1st",
+ "sem": "1st",
+ "code": "PurCom",
+ "description": "Purposive Communication",
+ "credit": "3.0"
+ },
+  {
+ "year_level": "1st",
+ "sem": "1st",
+ "code": "RPH",
+ "description": "Readings in Philippine History",
+ "credit": "3.0"
+ },
+{
+ "year_level": "1st",
+ "sem": "1st",
+ "code": "TCW",
+ "description": "The Contemporary World",
+ "credit": "3.0"
+ },
+{
+ "year_level": "1st",
+ "sem": "1st",
+ "code": "MMW",
+ "description": "Mathematics in the Modern World",
+ "credit": "3.0"
+ },
+{
+ "year_level": "1st",
+ "sem": "1st",
+ "code": "PATH FIT 1",
+ "description": "Movement Enhancement",
+ "credit": "3.0"
+ },
+{
+ "year_level": "1st",
+ "sem": "1st",
+ "code": "NSTP101b",
+ "description": "Civic Welfare Training Service 1",
+ "credit": "3.0"
+ }
+ ]
+}
