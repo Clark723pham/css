@@ -5,6 +5,21 @@
     <link rel="stylesheet" href="normalize.css" media="screen">
     <link rel="stylesheet" href="resets.css" media="screen">
     <link rel="stylesheet" href="styles.css" media="screen">
+    <script>
+        alert("Hello Welcome to my Porfolio");
+
+        var greet = "Hello " // global variable
+        function myfunction(){
+        var name = "Clark!";
+        alert(greet + name); //can access global and local
+        variable
+        }
+        myfunction();
+        alert(greet);//can access   global variable
+        alert(name); //error: can't access local variable
+
+
+    </script>
 </head>
 <body>
     <header>
@@ -20,21 +35,46 @@
 <div class="page-content">
     <div class="card" id="about">
         <p class="card-header">About</p>
-        <p class="card-body">Hello! Tell us about yourself.</p>
+        <p class="card-body">Hello! My Name is Clark Kent P. Pastillero, 19 Years Old living in Zone 6, Bugo Jemelina Stress Cagayan de Oro City</p>
+        <img src="clark.jpg" width="250" height="250">
     </div>
     <div class="card" id="education">
         <p class="card-header">Education</p>
-        <p class="card-body">Tell us about your education</p>
+        <p class="card-body">I am a University Student from the University of Science and Technology in Philippines</p>
     </div>
     <div class="card" id="skills">
         <p class="card-header">Skills</p>
-        <p class="card-body">Tell us about your IT Skills>
+        <ul>
+            <li>Analysis</li>
+            <li>Debugging</li>
+            <li>Sports</li>
+            <li>Dancing</li>
+        </ul>
     </div>
     <div class="card" id="portfolio">
         <p class="card-header">Portfolio</p>
-        <p class="card-body">Share your previous IT projects</p>
+        <ul>
+            <li>Cashiering System</li>
+            <li>Carwash Management System</li>
+            <li>Biling System</li>
+            <li>Grade Management System</li>
+        </ul>
     </div>
-</div>
+        <p id="para1" class="card-body"> Hello! Tell us about yourself</p>
+        <p id="para2" class="card-body"> Tell us about your education</p>
+        <p id="para3" class="card-body"> Tell us about your IT Skills</p>
+        <p id="para4" class="card-body"> Share your IT projects</p>
 
+</div>
+    <script>
+        const paragraph1 = document.getElementById("para1")
+        const paragraph2 = document.getElementById("para2")
+        const paragraph3 = document.getElementById("para3")
+        const paragraph4 = document.getElementById("para4")
+        console.log(paragraph1);
+        console.log(paragraph2);
+        console.log(paragraph3);
+        console.log(paragraph4);
+    </script>
 </body>
 </html>
