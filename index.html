@@ -36,7 +36,8 @@
     <div class="card" id="about">
         <p class="card-header">About</p>
         <p class="card-body">Hello! My Name is Clark Kent P. Pastillero, 19 Years Old living in Zone 6, Bugo Jemelina Stress Cagayan de Oro City</p>
-        <img src="clark.jpg" width="250" height="250">
+        <img src="clark.jpg" alt="Clark" />
+
     </div>
     <div class="card" id="education">
         <p class="card-header">Education</p>
@@ -60,28 +61,54 @@
             <li>Grade Management System</li>
         </ul>
     </div>
-        <p id="para1" class="card-body"> Hello! Tell us about yourself</p>
-        <p id="para2" class="card-body"> Tell us about your education</p>
-        <p id="para3" class="card-body"> Tell us about your IT Skills</p>
-        <p id="para4" class="card-body"> Share your IT projects</p>
 
-        <h2>Student List</h2>
-        <ul id="student-list" class="card-body"></p>
+    <div class="card" id="contact">
+        <p class="card-header">Contact</p>
+        <ul>
+            <li>0922 564 7890</li>
+            <li>TonyBruceStark@gmaill.com</li>
+        </ul>
+    </div>
+        <div class="card">
+        <p class="card-header">For Console</p>
+        <div class="card-body">
+            <h3>About Yourself</h3>
+            <p id="para1">Hello! Tell us about yourself</p>
+
+            <h3>Education</h3>
+            <p id="para2">Tell us about your education</p>
+
+            <h3>IT Skills</h3>
+            <p id="para3">Tell us about your IT Skills</p>
+
+            <h3>Projects</h3>
+            <p id="para4">Share your IT projects</p>
+        </div>
+        </div>
+
+
+<div class="card" id="students-card">
+    <p class="card-header">Student List</p>
+    <ul id="student-list" class="card-body"></ul>
+</div>
+
 
 </div>
     <script>
-        const paragraph1 = document.getElementById("para1")
-        const paragraph2 = document.getElementById("para2")
-        const paragraph3 = document.getElementById("para3")
-        const paragraph4 = document.getElementById("para4")
+        const paragraph1 = document.getElementById("para1");
+        const paragraph2 = document.getElementById("para2");
+        const paragraph3 = document.getElementById("para3");
+        const paragraph4 = document.getElementById("para4");
         console.log(paragraph1);
         console.log(paragraph2);
         console.log(paragraph3);
         console.log(paragraph4);
     </script>
 
+
+
     <script>
-        const jsonURL = "https://raw.githubusercontent.com/Clark723pham/css/refs/heads/main/students.json";
+        const jsonURL = "https://raw.githubusercontent.com/Clark723pham/css/refs/heads/main/students2.json";
 
         fetch(jsonURL)
             .then(response => response.json())
@@ -100,6 +127,58 @@
             })
             .catch(error => console.error("Error fetching JSON:", error));
     </script>
+<div class="card" id="courses-card">
+  <p class="card-header">Courses</p>
+  
+  <!-- Search bar -->
+  <input type="text" id="courseSearch" placeholder="Search courses..." />
+
+  <ul id="Courses"></ul>
+</div>
+
+</div>
+
+
+</div>
+
+    <script>
+        const jsonURL2 = "https://raw.githubusercontent.com/Clark723pham/css/main/courses.json";
+
+        let allCourses = []; // store all courses
+
+        fetch(jsonURL2)
+        .then(response => response.json())
+        .then(data => {
+            if (data.courses && Array.isArray(data.courses)) {
+            allCourses = data.courses;
+            displayCourses(allCourses);
+            } else {
+            console.error("Expected 'courses' array but got:", data);
+            }
+        })
+        .catch(error => console.error("Error fetching JSON:", error));
+
+        function displayCourses(courses) {
+        let courseList = document.getElementById("Courses");
+        courseList.innerHTML = ""; // clear old results
+        courses.forEach(course => {
+            let listItem = document.createElement("li");
+            listItem.textContent = `${course.code} - ${course.description} (Year: ${course.year_level}, Sem: ${course.sem}, Credit: ${course.credit})`;
+            courseList.appendChild(listItem);
+    });
+    }
+
+// Search functionality
+document.getElementById("courseSearch").addEventListener("input", function() {
+  const query = this.value.toLowerCase();
+  const filtered = allCourses.filter(course =>
+    course.code.toLowerCase().includes(query) ||
+    course.description.toLowerCase().includes(query)
+  );
+  displayCourses(filtered);
+});
+</script>
+
 
 </body>
 </html>
