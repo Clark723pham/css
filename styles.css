@@ -1,7 +1,9 @@
 body {
-font-family: Arial; /*no colon bro*/
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* change font here */
 margin: 0;
 z-index: 10;
+background-color: #f5f5f5; /* changed */
+text-align: center; /* center content by default */
 padding-top: 100px;
 }
 
@@ -59,42 +61,117 @@ list-style-type: none;
 position: fixed; top:0; width:100%;
 text-align: center;
 }
-.card-header{
-padding:1%;
-font-size: 20px;
-font-weight: 700;
-border-bottom: 2px solid rgb(192, 192, 192);
-text-align: center;
+.card-header {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #4B0082;
 }
 .card {
-/* Add shadows to create the "card" effect */
-border: 3px solid rgb(92, 0, 128);
-border-radius: 5px;
-width: 75%;/*changed to min width*/
-margin: 0% auto;
-min-height:170px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* the box shadow has no colon */
-margin-top: 2%;
-scroll-margin-top: 120px; 
+    border: 3px solid #4B0082;
+    border-radius: 10px;
+    width: 60%;
+    margin: 20px auto; /* center horizontally */
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background-color: white;
+    text-align: center; /* center text inside the card */
+}
+ul {
+    list-style-type: none; /* remove bullets */
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+.card img {
+  width: 250px;          /* keep it square */
+  height: 250px;         /* same as width */
+  border-radius: 50%;    /* makes it a circle */
+  object-fit: cover;     /* ensures the image fills the circle neatly */
+  display: block;        /* centers the image */
+  margin: 20px auto;     /* space around the image */
+
+  /* Border styling */
+  border: 5px solid #4B0082;   /* purple border */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* optional shadow for depth */
 }
 
-.card img {
-    margin-left: 60px;
-    margin-bottom: 50px;
-}
+
 
 .card ul {
-    margin-left: 60px;
-    margin-bottom: 50px;
+    margin: 0;             /* remove left margin */
+    padding: 0;            /* remove default indent */
+    text-align: center;    /* center the list items */
     font-family: Arial;
 }
-.container {
-/* Center child div horizontally*/
-display: flex;
-justify-content: center;
+.card ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;    /* ensure each item is centered */
 }
+
 .container {
 /* Center child div vertically*/
 display: flex;
 align-items: center;
 }
+#student-list,
+#Courses {
+    margin: 20px 0;       /* space above and below the list */
+    padding-left: 20px;   /* indent the list items */
+    line-height: 1.6;     /* spacing between list items */
+    font-size: 16px;      /* slightly larger text for readability */
+}
+#student-list,
+#Courses {
+    margin: 20px 0;
+    padding: 0;            /* remove left indent */
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: center;    /* center the text inside the card */
+}
+
+#student-list li,
+#Courses li {
+    margin-bottom: 10px;
+    text-align: center;    /* ensure list items are centered */
+}
+
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #4B0082;
+}
+#courseSearch {
+  width: 80%;
+  padding: 10px;
+  margin: 15px auto;
+  border: 2px solid #4B0082;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block; /* center horizontally */
+}
+.card h3 {
+  color: #4B0082;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-body p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+html {
+  scroll-behavior: smooth; /* smooth animated scrolling */
+}
+
+.card {
+  scroll-margin-top: 120px; /* offset for fixed nav bar height */
+}
+
